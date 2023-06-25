@@ -7,6 +7,7 @@ import VideoList from "./data/video-details.json";
 import Nav from "./components/navbar/navbar.js";
 import MainVideo from "./components/main video/MainVideo.js";
 import VideoDetails from "./components/VideoDetails/VideoDetails.js";
+import CommentForm from "./components/CommentForm/CommentForm.js";
 
 function App() {
   const [videos, setVideos] = useState(VideoList);
@@ -22,7 +23,7 @@ function App() {
       <MainVideo video={selectedVideo} />
       <main>
         <VideoDetails video={selectedVideo}/>
-        <div>COMMENTS</div>
+        <CommentForm/>
       </main>
       <section>VIDEO LIST</section>
     </div>
