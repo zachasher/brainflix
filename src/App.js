@@ -8,6 +8,7 @@ import Nav from "./components/navbar/navbar.js";
 import MainVideo from "./components/main video/MainVideo.js";
 import VideoDetails from "./components/VideoDetails/VideoDetails.js";
 import CommentForm from "./components/CommentForm/CommentForm.js";
+import Comments from "./components/Comments/Comments.js";
 
 function App() {
   const [videos, setVideos] = useState(VideoList);
@@ -24,6 +25,7 @@ function App() {
       <main>
         <VideoDetails video={selectedVideo}/>
         <CommentForm/>
+        <Comments video={selectedVideo}/>
       </main>
       <section>VIDEO LIST</section>
     </div>
