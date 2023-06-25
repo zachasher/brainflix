@@ -1,0 +1,70 @@
+@use "./../../assets/styles/resets" as *;
+@use "./../../assets/styles/variables" as *;
+@use "./../../assets/styles/breakpoints" as *;
+@use "./../../assets/styles/fonts" as *;
+
+.active-video-details {
+  padding: 1.5rem 1rem 1rem 1rem;
+
+  &__title {
+    @include mobile-page-header;
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    padding-top: 1rem;
+    @include mobile-body-copy;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  border-top: 1px solid $Brainflix-Mercury;
+  border-bottom: 1px solid $Brainflix-Mercury;
+
+  &__left {
+    width: 50%;
+  }
+
+  &__channel {
+    @include mobile-subheader;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+
+  &__date {
+    @include mobile-body-copy;
+    color: $Brainflix-Silver;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__views {
+    display: flex;
+    padding-bottom: 1rem;
+    &--icon {
+      padding-right: 1rem;
+    }
+
+    &--count {
+      @include mobile-body-copy;
+      color: $Brainflix-Silver;
+    }
+  }
+
+  &__likes {
+    display: flex;
+    &--icon {
+      padding-right: 1rem;
+    }
+
+    &--count {
+      @include mobile-body-copy;
+      color: $Brainflix-Silver;
+    }
+  }
+}

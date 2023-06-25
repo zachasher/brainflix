@@ -4,7 +4,7 @@
 @use './../../assets/styles/fonts' as *;
 
 .nav {
-  background-color: grey;
+  background-color: $Brainflix-White;
   display: flex;
   flex-direction: column;
   align-items: center;
