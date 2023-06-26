@@ -12,42 +12,20 @@ function Comments(props) {
 
   return (
     <section className="comment-list">
-      <article class="comment">
-        <div class="comment__icon"></div>
-        <div class="comment__main">
-          <div class="comment__main-namedate">
-            <h3 class="comment__name">{props.video.comments[0].name}</h3>
-            <span class="comment__date">
-            {convertedDate(props.video.comments[0].timestamp)}
-            </span>
+      {props.video.comments.map((comment) => (
+        <article className="comment" key={comment.id}>
+          <div className="comment__icon"></div>
+          <div className="comment__main">
+            <div className="comment__main-namedate">
+              <h3 className="comment__name">{comment.name}</h3>
+              <span className="comment__date">
+                {convertedDate(comment.timestamp)}
+              </span>
+            </div>
+            <p className="comment__text">{comment.comment}</p>
           </div>
-          <p class="comment__text">{props.video.comments[0].comment}</p>
-        </div>
-      </article>
-      <article class="comment">
-        <div class="comment__icon"></div>
-        <div class="comment__main">
-          <div class="comment__main-namedate">
-            <h3 class="comment__name">{props.video.comments[1].name}</h3>
-            <span class="comment__date">
-            {convertedDate(props.video.comments[1].timestamp)}
-            </span>
-          </div>
-          <p class="comment__text">{props.video.comments[1].comment}</p>
-        </div>
-      </article>
-      <article class="comment">
-        <div class="comment__icon"></div>
-        <div class="comment__main">
-          <div class="comment__main-namedate">
-            <h3 class="comment__name">{props.video.comments[2].name}</h3>
-            <span class="comment__date">
-            {convertedDate(props.video.comments[2].timestamp)}
-            </span>
-          </div>
-          <p class="comment__text">{props.video.comments[2].comment}</p>
-        </div>
-      </article>
+        </article>
+      ))}
     </section>
   );
 }

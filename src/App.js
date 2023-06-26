@@ -9,6 +9,7 @@ import MainVideo from "./components/main video/MainVideo.js";
 import VideoDetails from "./components/VideoDetails/VideoDetails.js";
 import CommentForm from "./components/CommentForm/CommentForm.js";
 import Comments from "./components/Comments/Comments.js";
+import SideVideos from "./components/SideVideos/SideVideos.js";
 
 function App() {
   const [videos, setVideos] = useState(VideoList);
@@ -23,11 +24,16 @@ function App() {
       <Nav />
       <MainVideo video={selectedVideo} />
       <main>
+        <section>
         <VideoDetails video={selectedVideo}/>
         <CommentForm/>
-        <Comments video={selectedVideo}/>
+        <Comments video={selectedVideo}/>  
+        </section>
+        <SideVideos
+        videos={videos}
+        clickHandler={clickHandler}
+        selectedVideo={selectedVideo}/>
       </main>
-      <section>VIDEO LIST</section>
     </div>
   );
 }
