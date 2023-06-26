@@ -1,2 +1,11 @@
 @use './assets/styles/resets' as *;
 @use './assets/styles/variables' as *;
+@use './assets/styles/breakpoints' as *;
+@use './assets/styles/fonts' as *;
+
+// .main-section1 {
+//     @include media-desktop {
+//         display: flex;
+//         width: 75%;
+//     }
+// }

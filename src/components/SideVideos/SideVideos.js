@@ -13,7 +13,7 @@ const SideVideos = (props) => {
           return (
             <li
               onClick={() => {
-                props.clickHandler(video);
+                props.clickHandler(video.id);
               }}
               key={video.id}
               className="video-list-item"
