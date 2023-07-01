@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Nav />
       <MainVideo video={selectedVideo} />
-      <main>
+      <main className="main-section">
         <section className="main-section1">
         <VideoDetails video={selectedVideo}/>
         <CommentForm video={selectedVideo}/>

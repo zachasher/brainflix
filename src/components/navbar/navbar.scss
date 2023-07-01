@@ -1,7 +1,7 @@
-@use './../../assets/styles/resets' as *;
-@use './../../assets/styles/variables' as *;
-@use './../../assets/styles/breakpoints' as *;
-@use './../../assets/styles/fonts' as *;
+@use './../../styles/resets' as *;
+@use './../../styles/variables' as *;
+@use './../../styles/breakpoints' as *;
+@use './../../styles/fonts' as *;
 
 .nav {
   background-color: $Brainflix-White;
@@ -15,6 +15,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 2rem;
+  }
+
+  @include media-desktop {
+    padding: 1rem 6rem;
   }
 
   &__logo {
@@ -43,9 +47,15 @@
     background-image: url(./../../assets/icons/search.svg);
     background-position: 10px 10px; 
     background-repeat: no-repeat;
+    @include mobile-body-copy;
 
     @include media-tablet {
-      width: 50%;
+      width: 40%;
+      @include tablet-body-copy;
+    }
+
+    @include media-desktop {
+      width: 25%;
     }
   }
 
@@ -64,6 +74,7 @@
   }
 
   &__upload-button1 {
+    @include mobile-label-button;
     display: none;
     width: 100%;
     background-color: $Brainflix-Blue;
@@ -78,8 +89,10 @@
     cursor: pointer;
 
     @include media-tablet {
+      @include tablet-label-button;
+      color: $Brainflix-White;
       display:block;
-      width: 150px;
+      width: 160px;
       margin-left: 1rem;
     }
   }

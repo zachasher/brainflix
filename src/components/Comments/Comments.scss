@@ -1,13 +1,17 @@
-@use './../../assets/styles/resets' as *;
-@use './../../assets/styles/variables' as *;
-@use './../../assets/styles/breakpoints' as *;
-@use './../../assets/styles/fonts' as *;
+@use './../../styles/resets' as *;
+@use './../../styles/variables' as *;
+@use './../../styles/breakpoints' as *;
+@use './../../styles/fonts' as *;
 
 .comment-list {
     padding: 0 1rem 1rem 1rem;
 
     @include media-tablet {
       padding: 0 2rem 1rem 2rem;
+    }
+
+    @include media-desktop {
+      padding: 0;
     }
 }
 
@@ -23,8 +27,8 @@
   }
 
   @include media-desktop {
-    padding: 2.25rem 0;
-    margin: 0 20rem;
+    padding: 1.5rem 1rem;
+    margin: 0;
   }
 
   &__icon {

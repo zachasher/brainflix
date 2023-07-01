@@ -1,7 +1,7 @@
-@use './assets/styles/resets' as *;
-@use './assets/styles/variables' as *;
-@use './assets/styles/breakpoints' as *;
-@use './assets/styles/fonts' as *;
+@use './styles/resets' as *;
+@use './styles/variables' as *;
+@use './styles/breakpoints' as *;
+@use './styles/fonts' as *;
 
 // .main-section1 {
 //     @include media-desktop {
@@ -9,3 +9,14 @@
 //         width: 75%;
 //     }
 // }
+
+.main-section {
+    @include media-desktop {
+        display: flex;
+        padding: 0 6rem;
+    }
+}
+
+.main-section1 {
+    border-right: 1px solid $Brainflix-Mercury;
+}
