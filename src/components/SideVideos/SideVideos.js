@@ -1,4 +1,4 @@
-import "./SideVideos.scss";
+import "./side-videos.scss";
 
 const SideVideos = (props) => {
   const fileredArray = props.videos.filter((video) => {

@@ -11,6 +11,7 @@ function Nav() {
           type="search"
           placeholder="Search"
           className="nav__search"
+          id="search-input"
         ></input>
         <button className="nav__upload-button1">UPLOAD</button>
         <div className="nav__avatar"></div>

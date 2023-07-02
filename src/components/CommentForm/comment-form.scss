@@ -88,8 +88,9 @@
 
     @include media-tablet {
       height: 3rem;
-      padding: 1rem;
+      padding: 0.75rem;
       margin: 0;
+      align-items: center;
       // margin-bottom: 2.25rem;
       @include tablet-body-copy;
     }

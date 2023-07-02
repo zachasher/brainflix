@@ -5,7 +5,7 @@ import { useState } from "react";
 import VideoList from "./data/video-details.json";
 import VideoShortList from "./data/videos.json";
 
-import Nav from "./components/navbar/navbar.js";
+import Nav from "./components/navbar/Navbar.js";
 import MainVideo from "./components/main video/MainVideo.js";
 import VideoDetails from "./components/VideoDetails/VideoDetails.js";
 import CommentForm from "./components/CommentForm/CommentForm.js";

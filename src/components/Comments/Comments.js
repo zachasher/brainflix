@@ -1,4 +1,4 @@
-import "./Comments.scss";
+import "./comments.scss";
 
 function Comments(props) {
     function convertedDate(date) {

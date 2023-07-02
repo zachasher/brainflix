@@ -1,4 +1,4 @@
-import "./mainvideo.scss";
+import "./main-video.scss";
 
 const MainVideo = (props) => {
   return (

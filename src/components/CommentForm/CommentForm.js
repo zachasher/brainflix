@@ -1,4 +1,4 @@
-import "./CommentForm.scss";
+import "./comment-form.scss";
 
 function CommentForm(props) {
   return (
@@ -8,10 +8,9 @@ function CommentForm(props) {
         <div className="form__icon"></div>
         <form className="form__fields">
           <div className="form__fields1">
-            <label htmlFor="text">JOIN THE CONVERSATION</label>
+            <label htmlFor="comment">JOIN THE CONVERSATION</label>
             <textarea
               placeholder="Add a new comment"
-              name="text"
               rows="5"
               required
               className="form__input"
