@@ -15,13 +15,16 @@
 .video-container {
     background-color: $Brainflix-DarkBlack;
     width: 100%;
-    height: 500px;
-    // padding-top: 56.25%;
+    padding-top: 56.25%;
     position: relative;
 
     @include media-tablet {
-        height: 500px;
+        height: 400px;
         padding-top: 0px;
+    }
+
+    @include media-desktop {
+        height:500px;
     }
 }
 

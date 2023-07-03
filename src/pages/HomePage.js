@@ -128,7 +128,6 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 import MainVideo from "../components/MainVideo/MainVideo.js";
 import VideoDetails from "../components/VideoDetails/VideoDetails.js";
@@ -136,13 +135,7 @@ import CommentForm from "../components/CommentForm/CommentForm.js";
 import Comments from "../components/Comments/Comments.js";
 import SideVideos from "../components/SideVideos/SideVideos.js";
 
-import {
-  API,
-  APIKEY,
-  APIDEFAULT,
-  fetchVideos,
-  fetchSelectedVideo,
-} from "../utils/apiUtils.mjs";
+import { fetchVideos, fetchSelectedVideo } from "../utils/apiUtils.mjs";
 
 function HomePage() {
   const [videos, setVideos] = useState(null);
@@ -152,55 +145,25 @@ function HomePage() {
 
   const getstate = async () => {
     try {
-      const response = await fetchVideos();
+      const allVideosResponse = await fetchVideos();
       let selectedVideoResponse = null;
       if (videoID) {
         selectedVideoResponse = await fetchSelectedVideo(videoID);
       } else {
-        selectedVideoResponse = await fetchSelectedVideo(response.data[0].id);
+        selectedVideoResponse = await fetchSelectedVideo(
+          allVideosResponse.data[0].id
+        );
       }
-      setVideos(response.data);
-      setSelectedVideo(selectedVideoResponse.data)
+      setVideos(allVideosResponse.data);
+      setSelectedVideo(selectedVideoResponse.data);
     } catch (error) {
       console.log("Error getting data", error);
     }
   };
 
   useEffect(() => {
-    // axios
-    //   .get(`${API}${APIKEY}`)
-    //   .then((response) => {
-    //     setVideos(response.data);
-    //     console.log("First call", response.data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
     getstate();
   }, [videoID]);
-
-//   useEffect(() => {
-//     if (videoID) {
-//       axios
-//         .get(`${API}/${videoID}${APIKEY}`)
-//         .then((response) => {
-//           setSelectedVideo(response.data);
-//           console.log("Second call", response.data);
-//         })
-//         .catch((error) => {
-//           console.log("error fetching data", error);
-//         });
-//     } else {
-//       axios
-//         .get(`${APIDEFAULT}`)
-//         .then((response) => {
-//           setSelectedVideo(response.data);
-//         })
-//         .catch((error) => {
-//           console.log("error fetching data", error);
-//         });
-//     }
-//   }, [videoID]);
 
   if (!selectedVideo || !videos) {
     return <p>Loading...</p>;
