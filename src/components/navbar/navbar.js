@@ -11,9 +11,9 @@ function Nav() {
 
   return (
     <nav className="nav">
-      {/* <Link  to={`/home`}> */}
+      <Link  to={`/home`}>
         <img src={logo} alt="Brainflix Logo" className="nav__logo" />
-      {/* </Link> */}
+      </Link>
       <div className="nav__container">
         <input
           type="search"

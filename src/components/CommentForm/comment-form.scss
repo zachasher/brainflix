@@ -101,26 +101,9 @@
       padding: 0.75rem;
       margin: 0;
       align-items: center;
-      // margin-bottom: 2.25rem;
       @include tablet-body-copy;
     }
   }
-
-  // textarea,
-  // input {
-  //   background-color: $Brainflix-Alabaster;
-  // }
-
-  // textarea:active,
-  // input:active {
-  //   border: 1px solid $Brainflix-Blue;
-  //   box-shadow: 1px $Brainflix-Blue;
-  //   background-color: $Brainflix-White;
-  // }
-
-  // textarea:invalid, input:invalid {
-  //   border: 1px solid #D22D2D;
-  // }
 
   &__button {
     height: 2.5rem;
