@@ -86,6 +86,16 @@
     @include mobile-body-copy;
     color: $Brainflix-Black;
 
+    &:focus {
+      border: 1px solid $Brainflix-Blue;
+      outline: none;
+    }
+
+    &--invalid {
+      border: 1px solid red;
+      outline: none;
+    }
+
     @include media-tablet {
       height: 3rem;
       padding: 0.75rem;
@@ -96,16 +106,17 @@
     }
   }
 
-  textarea,
-  input {
-    background-color: $Brainflix-Alabaster;
-  }
+  // textarea,
+  // input {
+  //   background-color: $Brainflix-Alabaster;
+  // }
 
-  textarea:active,
-  input:active {
-    border: 1px solid $Brainflix-Black;
-    background-color: $Brainflix-White;
-  }
+  // textarea:active,
+  // input:active {
+  //   border: 1px solid $Brainflix-Blue;
+  //   box-shadow: 1px $Brainflix-Blue;
+  //   background-color: $Brainflix-White;
+  // }
 
   // textarea:invalid, input:invalid {
   //   border: 1px solid #D22D2D;

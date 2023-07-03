@@ -15,9 +15,14 @@
 .video-container {
     background-color: $Brainflix-DarkBlack;
     width: 100%;
-    padding-top: 56.25%;
-    height: 0px;
+    height: 500px;
+    // padding-top: 56.25%;
     position: relative;
+
+    @include media-tablet {
+        height: 500px;
+        padding-top: 0px;
+    }
 }
 
 .video {
@@ -26,5 +31,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    aspect-ratio: auto;
+
+    @include media-tablet {
+        aspect-ratio: 16 / 9;
+    }
 }
   

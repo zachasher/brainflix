@@ -38,6 +38,7 @@
   margin-bottom: 1rem;
   width: 100%;
   cursor: pointer;
+  text-decoration: none;
   // align-items: center;
 
   &__thumbnail {
@@ -79,4 +80,8 @@
       @include tablet-body-copy;
     }
   }
+}
+
+a {
+  text-decoration: none;
 }
