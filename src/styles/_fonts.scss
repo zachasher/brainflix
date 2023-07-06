@@ -86,3 +86,9 @@
   @include bold-text($Brainflix-Silver, 0.75rem);
   line-height: 1.25rem;
 }
+
+//Use argument for mixins - default colour
+@mixin test($color:purple, $font-size) {
+font-size: $font-size;
+color: $color;
+}

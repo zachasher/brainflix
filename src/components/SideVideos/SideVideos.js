@@ -1,7 +1,7 @@
 import "./side-videos.scss";
 import { Link } from "react-router-dom";
 import React from "react";
-
+// ({filteredVideo, shshsl})
 const SideVideos = (props) => {
   return (
     <section className="side-videos">
