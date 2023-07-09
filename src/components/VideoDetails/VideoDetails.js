@@ -3,16 +3,9 @@ import "./video-details.scss";
 import viewsIcon from "./../../assets/icons/views.svg";
 import likesIcon from "./../../assets/icons/likes.svg";
 
-function VideoDetails(props) {
-  function convertedDate(date) {
-    const showDate = new Date(date);
-    const month = (showDate.getMonth() + 1).toString().padStart(2, "0");
-    const day = showDate.getDate().toString().padStart(2, "0");
-    const year = showDate.getFullYear();
-    const formattedDate = `${month}/${day}/${year}`;
-    return formattedDate;
-  }
+import { convertedDate } from "../../utils/apiUtils.mjs";
 
+function VideoDetails(props) {
   return (
     <section className="active-video-details">
       <h1 className="active-video-details__title">{props.video.title}</h1>

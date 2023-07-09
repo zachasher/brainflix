@@ -15,4 +15,13 @@ const fetchSelectedVideo = async(videoID) => {
     return axios.get(`${API}/${videoID}${APIKEY}`)
 };
 
-export { API, APIKEY, APIDEFAULT, fetchVideos, fetchSelectedVideo };
+function convertedDate(date) {
+  const showDate = new Date(date);
+  const month = (showDate.getMonth() + 1).toString().padStart(2, "0");
+  const day = showDate.getDate().toString().padStart(2, "0");
+  const year = showDate.getFullYear();
+  const formattedDate = `${month}/${day}/${year}`;
+  return formattedDate;
+}
+
+export { API, APIKEY, APIDEFAULT, fetchVideos, fetchSelectedVideo, convertedDate };

@@ -1,15 +1,8 @@
 import "./comments.scss";
 
-function Comments(props) {
-    function convertedDate(date) {
-        const showDate = new Date(date);
-        const month = (showDate.getMonth() + 1).toString().padStart(2, "0");
-        const day = showDate.getDate().toString().padStart(2, "0");
-        const year = showDate.getFullYear();
-        const formattedDate = `${month}/${day}/${year}`;
-        return formattedDate;
-      }
+import { convertedDate } from "../../utils/apiUtils.mjs";
 
+function Comments(props) {
   return (
     <section className="comment-list">
       {props.video.comments.map((comment) => (
