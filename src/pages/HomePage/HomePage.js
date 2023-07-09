@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import MainVideo from "../components/MainVideo/MainVideo.js";
-import VideoDetails from "../components/VideoDetails/VideoDetails.js";
-import CommentForm from "../components/CommentForm/CommentForm.js";
-import Comments from "../components/Comments/Comments.js";
-import SideVideos from "../components/SideVideos/SideVideos.js";
+import MainVideo from "../../components/MainVideo/MainVideo.js";
+import VideoDetails from "../../components/VideoDetails/VideoDetails.js";
+import CommentForm from "../../components/CommentForm/CommentForm.js";
+import Comments from "../../components/Comments/Comments.js";
+import SideVideos from "../../components/SideVideos/SideVideos.js";
 
-import { fetchVideos, fetchSelectedVideo } from "../utils/apiUtils.mjs";
+import { fetchVideos, fetchSelectedVideo } from "../../utils/apiUtils.mjs";
 
 function HomePage() {
   const [videos, setVideos] = useState(null);

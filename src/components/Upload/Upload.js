@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Upload.scss";
+import "./upload.scss";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 
 function Upload() {
@@ -61,13 +61,13 @@ function Upload() {
             />
           </label>
         </div>
+        </form>
         <div className="upload-section__buttons">
           <button type="submit" className="upload-section__publish">
             PUBLISH
           </button>
           <p className="upload-section__cancel">CANCEL</p>
         </div>
-      </form>
     </section>
   );
 }

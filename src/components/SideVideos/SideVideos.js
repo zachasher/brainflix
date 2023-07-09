@@ -28,7 +28,6 @@ const SideVideos = (props) => {
             </li>
           </Link>
         ))}
-        ;
       </ul>
     </section>
   );

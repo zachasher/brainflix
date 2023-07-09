@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage.js";
-import UploadPage from "./pages/UploadPage.js";
-import Navbar from "./components/navbar/Navbar.js";
+import HomePage from "./pages/HomePage/HomePage.js";
+import UploadPage from "./pages/UploadPage/UploadPage.js";
+import Navbar from "./components/Navbar/Navbar.js";
 import "./App.scss";
 
 function App() {
