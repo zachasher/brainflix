@@ -21,24 +21,14 @@ function Nav() {
           className="nav__search"
           id="search-input"
         ></input>
-        <button
-          onClick={() => {
-            navigate("/upload");
-          }}
-          className="nav__upload-button1"
-        >
+        <Link to="/upload" className="nav__upload-buttons button1">
           UPLOAD
-        </button>
+        </Link>
         <div className="nav__avatar"></div>
       </div>
-      <button
-        onClick={() => {
-          navigate("/upload");
-        }}
-        className="nav__upload-button2"
-      >
+      <Link to="/upload" className="nav__upload-buttons button2">
         UPLOAD
-      </button>
+      </Link>
     </nav>
   );
 }
