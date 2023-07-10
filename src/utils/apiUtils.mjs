@@ -1,18 +1,21 @@
 import axios from "axios";
 
-const API = "https://project-2-api.herokuapp.com/videos";
-const APIKEY = "?api_key=53e14c8e-d35f-4d88-9706-3fc9b5608313";
+const API = "http://localhost:8080/videos/";
 
 const APIDEFAULT =
-  "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=53e14c8e-d35f-4d88-9706-3fc9b5608313";
+  "http://localhost:8080/videos/84e96018-4022-434e-80bf-000ce4cd12b8";
 
 
 const fetchVideos = async () => {
-    return axios.get(API + APIKEY);
+    return axios.get(API);
 };
 
 const fetchSelectedVideo = async(videoID) => {
-    return axios.get(`${API}/${videoID}${APIKEY}`)
+    return axios.get(`${API}/${videoID}`)
+};
+
+const uploadVideo = async (videoData) => {
+  return axios.post(API, videoData);
 };
 
 function convertedDate(date) {
@@ -24,4 +27,4 @@ function convertedDate(date) {
   return formattedDate;
 }
 
-export { API, APIKEY, APIDEFAULT, fetchVideos, fetchSelectedVideo, convertedDate };
+export { API, APIDEFAULT, fetchVideos, fetchSelectedVideo, convertedDate, uploadVideo };
