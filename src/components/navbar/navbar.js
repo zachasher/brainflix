@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "./navbar.scss";
@@ -7,7 +6,6 @@ import "./navbar.scss";
 import logo from "../../assets/logos/BrainFlix-logo.svg";
 
 function Nav() {
-  const navigate = useNavigate();
 
   return (
     <nav className="nav">
