@@ -16,11 +16,11 @@ function VideoDetails(props) {
         </div>
         <div className="stats__right">
           <div className="stats__views">
-            <img src={viewsIcon} className="stats__views--icon"></img>
+            <img src={viewsIcon} className="stats__views--icon" alt="Views Icon"></img>
             <p className="stats__views--count">{props.video.views}</p>
           </div>
           <div className="stats__likes">
-            <img src={likesIcon} className="stats__likes--icon"></img>
+            <img src={likesIcon} className="stats__likes--icon" alt="Likes Icon"></img>
             <p className="stats__likes--count">{props.video.likes}</p>
           </div>
         </div>
