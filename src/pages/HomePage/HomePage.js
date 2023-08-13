@@ -36,7 +36,7 @@ function HomePage() {
   };
 
   useEffect(() => {
-    getstate();}, [videoID]);
+    getstate();}, [videoID, getstate]);
 
   if (!selectedVideo || !videos) {
     return <p>Loading...</p>;
