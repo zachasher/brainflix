@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 
 import MainVideo from "../components/MainVideo/MainVideo.js";
@@ -15,7 +15,7 @@ function HomePage() {
 
   const { videoID } = useParams();
 
-  const getstate = async () => {
+  const getstate = useCallback(async () => {
     try {
       const allVideosResponse = await fetchVideos();
       let selectedVideoResponse = null;
@@ -31,7 +31,7 @@ function HomePage() {
     } catch (error) {
       console.log("Error getting data", error);
     }
-  };
+  }, [videoID]);
 
   useEffect(() => {
     getstate();
