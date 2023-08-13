@@ -1,8 +1,6 @@
 import "./main-video.scss";
 
-const MainVideo = (props) => {
-  {console.log(props.video)};
-  
+const MainVideo = (props) => { 
   return (
     <div className="video-container">
       
